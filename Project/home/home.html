@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="ipl.png" alt="Logo" class="logo">
+            <span class="info">Coin: 500 | SP1739(DEMO)</span>
+        </div>
+        <ul class="navbar-menu">
+            <button type="button" onclick="window.location.href='../home/home.html'" class="btn"><i class="fa-solid fa-house"></i> Home</button>
+        
+            <button type="button" onclick="window.location.href='https://www.cricketworld.com/cricket/live'" class="btn"><i class="fa-solid fa-calendar-days"></i> Schedule</button>
+            <button type="button" onclick="window.location.href='../Index/Index.html'" class="btn"><i class="fa-solid fa-person-walking-arrow-right"></i> Logout</button>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <button type="button" onclick="window.location.href='https://www.cricketworld.com/cricket/live'" class="parent-button" style="margin-left: 680px;"><i class="fa-solid fa-calendar-plus"></i> Upcoming</button>
+        <div class="button-columns">
+            <div class="column">
+                <div class="button-box">
+                    <button type="button" onclick="window.location.href='https://www.cricketworld.com/cricket/live'" class="box-button"><i class="fa-solid fa-baseball"></i>In Play</button>
+                </div>
+                <div class="button-box">
+                    <button type="button" onclick="window.location.href='https://www.espncricinfo.com/cricket-fixtures'" class="box-button"><i class="fa-solid fa-trophy"></i> Tournament</button>
+                </div>
+                <div class="button-box">
+                    <button class="box-button"><i class="fa-solid fa-clipboard"></i> Leader</button>
+                </div>
+                <div class="button-box">
+                    <button class="box-button" onclick="window.location.href='../Settings/Settings.html'"><i class="fa-solid fa-cog"></i> Settings</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="button-box">
+                    <button type="button" onclick="window.location.href='livecasino.html'" class="box-button"><i class="fa-solid fa-dice"></i> Live Casino</button>
+                </div>
+                <div class="button-box">
+                    <button type="button" onclick="window.location.href='../language/language.html'" class="box-button"><i class="fa-solid fa-file-alt"></i> Rules</button>
+                </div>
+                <div class="button-box">
+                    <button type="button" onclick="window.location.href='../Settings/user.html'" class="box-button"><i class="fa-solid fa-lock"></i> Password</button>
+                </div>
+                <div class="button-box">
+                    <button class="box-button"><i class="fa-solid fa-file-alt"></i> Statement</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

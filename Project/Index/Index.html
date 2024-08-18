@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+
+    <h1 class="main-title">BSFx PRO</h1>
+    <div class="form-container">
+        
+        <h2>Play big win big</h2>
+        <form id="loginForm" method="post">
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="User Name" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="button" onclick="validateForm()" class="submit-btn">Login</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div> 
+
+    <footer class="footer">
+        <p>BSFx PRO &copy; All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (!username || !password) {
+                errorMessage.textContent = 'Please enter both username and password.';
+                return;
+            }
+
+            if (username === 'BSFx123' && password === '654321') {
+                window.location.href = '../language/language.html';
+            } else if (username !== 'BSFx123' && password !== '654321') {
+                errorMessage.textContent = 'Both username and password are incorrect.';
+            } else if (username !== 'BSFx123') {
+                errorMessage.textContent = 'Username is incorrect.';
+            } else if (password !== '654321') {
+                errorMessage.textContent = 'Password is incorrect.';
+            }
+        }
+    </script>
+    
+</body>
+</html>

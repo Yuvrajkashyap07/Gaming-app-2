@@ -1,0 +1,169 @@
+/* Basic reset and body styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 60%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .quick-stake-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .stake-box {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+  }
+  
+  .stake-box label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .stake-box input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Basic styles for the admin panel */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  form {
+    margin-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ccd0d5;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+  
+  .actions button {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #c0392b;
+  }
+  

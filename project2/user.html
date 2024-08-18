@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Betting Website - Settings</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="user.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-5QFeKzcljC7azrGcC2FSgFW3QlDH5HAzjRhYpIr05YK6G6HpNjNfjNH8LoxRJJfX" crossorigin="anonymous" />
+</head>
+<body>
+
+
+  <div class="container">
+    <h1>Account Settings</h1>
+
+ 
+  
+      <!-- Quick Stake Section -->
+      <section>
+        <h2>Quick Stake</h2>
+        <form id="quick-stake-form">
+          <div class="quick-stake-boxes">
+            <div class="stake-box">
+              <input type="radio" id="stake-10" name="quick-stake" value="10">
+              <label for="stake-10">$10</label>
+            </div>
+            <div class="stake-box">
+              <input type="radio" id="stake-20" name="quick-stake" value="20">
+              <label for="stake-20">$20</label>
+            </div>
+            <div class="stake-box">
+              <input type="radio" id="stake-50" name="quick-stake" value="50">
+              <label for="stake-50">$50</label>
+            </div>
+            <div class="stake-box">
+              <input type="radio" id="stake-100" name="quick-stake" value="100">
+              <label for="stake-100">$100</label>
+            </div>
+          </div>
+          <button type="submit">Save Quick Stake</button>
+        </form>
+      </section>
+
+    <!-- Personal Information Section -->
+    <section>
+      <h2>Personal Information</h2>
+      <form id="personal-info-form">
+        <div class="form-group">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" value="BSFx Pro" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" value="BSFx.Pro@gmail.com" required>
+        </div>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </section>
+
+    <!-- Change Password Section -->
+    <section>
+      <h2>Change Password</h2>
+      <form id="change-password-form">
+        <div class="form-group">
+          <label for="current-password">Current Password:</label>
+          <input type="password" id="current-password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="new-password">New Password:</label>
+          <input type="password" id="new-password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm New Password:</label>
+          <input type="password" id="confirm-password" required>
+        </div>
+
+        <button type="submit">Update Password</button>
+      </form>
+    </section>
+
+    <!-- Notification Preferences Section -->
+    <section>
+      <h2>Notification Preferences</h2>
+      <form id="notification-preferences-form">
+        <div class="form-group">
+          <input type="checkbox" id="email-notifications" checked>
+          <label for="email-notifications">Email Notifications</label>
+        </div>
+
+        <div class="form-group">
+          <input type="checkbox" id="sms-notifications">
+          <label for="sms-notifications">SMS Notifications</label>
+        </div>
+
+        <div class="form-group">
+          <input type="checkbox" id="push-notifications" checked>
+          <label for="push-notifications">Push Notifications</label>
+        </div>
+
+        <button type="submit">Save Preferences</button>
+      </form>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section>
+      <h2>Payment Methods</h2>
+      <div id="payment-methods">
+        <div class="payment-method">
+          <i class="fab fa-cc-visa"></i>
+          <span>Visa ending in 1234</span>
+          <button class="remove-btn">Remove</button>
+        </div>
+
+        <div class="payment-method">
+          <i class="fab fa-cc-mastercard"></i>
+          <span>MasterCard ending in 5678</span>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+
+      <button id="add-payment-method-btn">Add Payment Method</button>
+    </section>
+
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="user.js"></script>
+</body>
+</html>

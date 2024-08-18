@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Admin Panel - Manage Quick Stakes</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Admin Panel - Manage Quick Stakes</h1>
+
+    <!-- Manage Quick Stakes Section -->
+    <section>
+      <h2>Quick Stake Amounts</h2>
+      <form id="admin-quick-stake-form">
+        <div class="quick-stake-boxes">
+          <div class="stake-box">
+            <label for="admin-stake-1">Amount 1:</label>
+            <input type="number" id="admin-stake-1" placeholder="Enter amount" required>
+          </div>
+          <div class="stake-box">
+            <label for="admin-stake-2">Amount 2:</label>
+            <input type="number" id="admin-stake-2" placeholder="Enter amount" required>
+          </div>
+          <div class="stake-box">
+            <label for="admin-stake-3">Amount 3:</label>
+            <input type="number" id="admin-stake-3" placeholder="Enter amount" required>
+          </div>
+          <div class="stake-box">
+            <label for="admin-stake-4">Amount 4:</label>
+            <input type="number" id="admin-stake-4" placeholder="Enter amount" required>
+          </div>
+        </div>
+        <button type="submit">Save Quick Stakes</button>
+      </form>
+    </section>
+
+    <section>
+        <h2>Create New User</h2>
+        <form id="create-user-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter username" required>
+  
+          <label for="role">Select Role:</label>
+          <select id="role" required>
+            <option value="level1-admin">Level 1 Admin</option>
+            <option value="level2-admin">Level 2 Admin</option>
+            <option value="end-user">End User</option>
+          </select>
+  
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+  
+          <button type="submit">Create User</button>
+        </form>
+      </section>
+  
+      <!-- User List Section -->
+      <section>
+        <h2>Existing Users</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="user-list">
+            <!-- Users will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="admin.js"></script>
+</body>
+</html>

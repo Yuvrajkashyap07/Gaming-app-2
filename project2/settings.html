@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        .button {
+            padding: 20px 50px;
+            font-size: 24px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            margin: 15px;
+            color: white;
+            background-color: #007BFF; /* Blue color */
+        }
+        .button:hover {
+            background-color: #0056b3; /* Darker blue */
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #admin-options {
+            display: none;
+            position: absolute;
+            top: 80px; /* Position below the Admin button */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        #admin-options.show {
+            display: block;
+            opacity: 1;
+        }
+        .admin-option {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 5px;
+            background-color: #e0e0e0;
+        }
+        .admin-option:hover {
+            background-color: #ccc;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="user-button" class="button" data-url="user.html">User</button>
+        <button id="admin-button" class="button">Admin</button>
+        <div id="admin-options">
+            <button class="admin-option" data-url="admin.html">Level 1 Admin</button>
+            <button class="admin-option" data-url="admin2.html">Level 2 Admin</button>
+        </div>
+    </div>
+
+    <script>
+        const adminButton = document.getElementById('admin-button');
+        const adminOptions = document.getElementById('admin-options');
+        const userButton = document.getElementById('user-button');
+        let showTimeout, hideTimeout;
+
+        adminButton.addEventListener('mouseover', () => {
+            clearTimeout(hideTimeout);
+            adminOptions.classList.add('show');
+        });
+
+        adminButton.addEventListener('mouseout', () => {
+            hideTimeout = setTimeout(() => {
+                adminOptions.classList.remove('show');
+            }, 300); // Delay hiding
+        });
+
+        adminOptions.addEventListener('mouseover', () => {
+            clearTimeout(hideTimeout); // Keep the options visible while hovering over them
+        });
+
+        adminOptions.addEventListener('mouseout', () => {
+            hideTimeout = setTimeout(() => {
+                adminOptions.classList.remove('show');
+            }, 300); // Delay hiding
+        });
+
+        const adminOptionButtons = document.querySelectorAll('.admin-option');
+        adminOptionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
+
+        userButton.addEventListener('click', () => {
+            const url = userButton.getAttribute('data-url');
+            window.location.href = url;
+        });
+    </script>
+</body>
+</html>
+
